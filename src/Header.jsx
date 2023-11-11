@@ -1,15 +1,16 @@
 import { FaGithub } from "react-icons/fa";
+import useWindowSize from "./hooks/useWindowSize";
 
-const themeImg = document.getElementById("theme");
 const Header = () => {
+    const { width } = useWindowSize();
 
     const githubUrl = "https://www.github.com/manisanghsharma";
     return (
         <header className="header">
-            <h1>AI Image Generator</h1>
+            <h1 id="title">AI Image Generator</h1>
             <button id="github" onClick={() => window.open(githubUrl)}>
                 <FaGithub id="git-icon" />
-                Checkout on Github
+                {width > 975 ? "Checkout on Github" : ""}
             </button>
         </header>
     );

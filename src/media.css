@@ -1,0 +1,28 @@
+@media only screen and (max-width: 610px) {
+  #github {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  #title {
+    font-size: 32px;
+  }
+
+  .container{
+    scale: 0.85;
+  }
+
+  .img-container{
+    scale: 0.65;
+    top: 32%;
+    left: 24.5%;
+  }
+
+  #download{
+    scale: 1.6;
+    position: relative;
+    top: 95px;
+    left: 195px;
+  }
+}

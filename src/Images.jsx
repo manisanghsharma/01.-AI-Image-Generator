@@ -1,4 +1,4 @@
-const Images = ({listItems, image, setDisplay, setSliderImg, handleClick, current }) => {
+const Images = ({image, setDisplay, setSliderImg, handleClick}) => {
     return (
         <li
             onClick={(e) => {

@@ -1,4 +1,7 @@
+import { FaGithub } from "react-icons/fa";
+import useWindowSize from "./hooks/useWindowSize";
 const Footer = () => {
+    const {width} = useWindowSize();
   return (
       <footer>
           <p
@@ -8,6 +11,7 @@ const Footer = () => {
               }
           >
               Buy Me a Coffee!
+          {/* {width < 610 ? <FaGithub style={{ fontSize: "15px" }} /> : null}   */}
           </p>
       </footer>
   );

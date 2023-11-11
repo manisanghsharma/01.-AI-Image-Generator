@@ -13,12 +13,6 @@
     --font-color: rgb(225, 225, 225);
 }
 
-/* .light-theme{
-  --primary-color: rgb(179, 245, 240);
-  --secondary-color: rgb(120, 226, 224);
-  --font-color: 191919;
-} */
-
 body {
     background-color: var(--primary-color);
 }

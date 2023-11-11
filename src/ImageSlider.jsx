@@ -3,7 +3,7 @@ import {saveAs} from 'file-saver';
 const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, listItems, current }) => {
     
     const handleDownload = async(url) => {
-        saveAs(url, `${prompt}-{current+1}`);
+        saveAs(url, `${prompt}-${current+1}`);
     }
     return (
         <div className="img-container" style={{ display: display }}>
@@ -27,7 +27,7 @@ const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, li
             >
                 Download Image
             </button>
-            
+
         </div>
     );
 };
