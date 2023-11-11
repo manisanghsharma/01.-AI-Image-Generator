@@ -97,8 +97,10 @@ ul li img {
 .footer {
     text-align: center;
     color: var(--font-color);
-    position: relative;
-    top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -242,7 +244,7 @@ ul li img {
 #footer-git{
     position: absolute;
     left: 63%;
-    bottom: 10px;
+    bottom: 14px;
     font-size: 20px;
     color: white;
     cursor: pointer;
