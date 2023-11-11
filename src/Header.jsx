@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 
 const themeImg = document.getElementById("theme");
-const Header = ({theme, setTheme}) => {
+const Header = () => {
 
     const githubUrl = "https://www.github.com/manisanghsharma";
     return (

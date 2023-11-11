@@ -4,8 +4,14 @@ const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, li
     
     const handleDownload = () => {
         new JsFileDownloader({
-            url: sliderImg
-        })
+            url: sliderImg,
+            headers: [
+                {
+                    name: "Authorization",
+                    value: "Bearer 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",
+                },
+            ],
+        });
     }
 
     return (
