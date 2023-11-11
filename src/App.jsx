@@ -4,6 +4,7 @@ import Images from "./Images";
 import Header from "./Header";
 import Input from "./Input";
 import ImageSlider from "./ImageSlider";
+import New from "./New";
 import { Toaster, toast } from "sonner";
 
 function App() {
@@ -118,6 +119,7 @@ function App() {
                     ))}
             </div>
 
+            <New />
             <Footer />
         </>
     );

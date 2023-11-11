@@ -8,7 +8,18 @@ const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, li
 
         // const blob = await outsideRes.blob();
         // const url = window.URL.createObjectURL(blob);
-        const blob = (await fetch(url)).blob();
+        // const options = [
+        //     headers: {
+        //         Authorization:
+        //             "Bearer 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",
+        //     },
+        // ];
+        const blob = await fetch(url, {
+            headers: {
+                Authorization:
+                    "Bearer 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",
+            }
+        }).blob();
         saveAs(blob, "image.png");
     }
     return (
