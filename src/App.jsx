@@ -4,8 +4,6 @@ import Images from "./Images";
 import Header from "./Header";
 import Input from "./Input";
 import ImageSlider from "./ImageSlider";
-import New from "./New";
-import { Toaster, toast } from "sonner";
 
 function App() {
     const [search, setSearch] = useState("");
@@ -18,38 +16,30 @@ function App() {
     const apiUrl = "https://api.openai.com/v1/images/generations";
 
     const handleClick = () => {
-
         let i;
         for (i = 0; i < listItems.length; i++) {
             if (listItems[i].url === sliderImg) {
-                // console.log(i);
                 setCurrent(i);
-                // console.log(current);
                 break;
             }
         }
     };
 
     const handleNext = () => {
-        // console.log(current);
         if (current < listItems.length - 1) {
-            setCurrent(current => current + 1);
+            setCurrent((current) => current + 1);
         } else {
             setCurrent(0);
         }
-
-        // console.log(current);
         setSliderImg(listItems[current].url);
     };
 
     const handleBack = () => {
-        // console.log(current);
         if (current > 0 && current < listItems.length) {
             setCurrent(current - 1);
         } else {
             setCurrent(listItems.length - 1);
         }
-        // console.log(current);
         setSliderImg(listItems[current].url);
     };
 
@@ -64,7 +54,7 @@ function App() {
                     "Content-Type": "application/json",
                     Authorization:
                         "Bearer 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",
-                    "User-Agent": "Chrome",
+                        "User-Agent": "Chrome",
                 },
                 body: JSON.stringify({
                     prompt: `${search}`,
@@ -118,8 +108,6 @@ function App() {
                         </ul>
                     ))}
             </div>
-
-            <New />
             <Footer />
         </>
     );

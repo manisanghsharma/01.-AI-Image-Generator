@@ -7,7 +7,7 @@ const Images = ({listItems, image, setDisplay, setSliderImg, handleClick, curren
                 handleClick();
             }}
         >
-            <img src={image.url} alt="" loading="lazy" />
+            <img key={image} src={image.url} alt="" loading="lazy" />
         </li>
     );
 };
