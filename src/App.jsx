@@ -67,7 +67,7 @@ function App() {
                 },
                 body: JSON.stringify({
                     prompt: `${search}`,
-                    n: 4,
+                    n: 1,
                     size: "512x512",
                 }),
             });
