@@ -74,7 +74,6 @@ function App() {
             let data = await response.json();
             let data_array = data.data;
             setListItems(data_array);
-            setImgurl(data_array[0].url);
         } finally {
             setIsLoading(false);
         }

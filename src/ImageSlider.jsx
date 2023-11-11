@@ -2,13 +2,14 @@ import { FaAngleRight, FaAngleLeft, FaTimes } from "react-icons/fa";
 import {saveAs} from 'file-saver';
 const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, listItems, current }) => {
     
-    const handleDownload = async(outsideUrl) => {
+    const handleDownload = async(url) => {
         // saveAs(sliderImg, 'Image.jpg');
-        const outsideRes = await fetch(outsideUrl);
+        // const outsideRes = await fetch(outsideUrl);
 
-        const blob = await outsideRes.blob();
-        const url = window.URL.createObjectURL(blob);
-        saveAs(url, "image.png");
+        // const blob = await outsideRes.blob();
+        // const url = window.URL.createObjectURL(blob);
+        const blob = (await fetch(url)).blob();
+        saveAs(blob, "image.png");
     }
     return (
         <div className="img-container" style={{ display: display }}>
