@@ -231,3 +231,20 @@ ul li img {
     transition: all 0.2s;
 }
 
+#robot{
+    width: 50px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    cursor: pointer;
+}
+
+#footer-git{
+    position: absolute;
+    left: 63%;
+    bottom: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+
+}

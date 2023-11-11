@@ -7,6 +7,7 @@ const Header = () => {
     const githubUrl = "https://www.github.com/manisanghsharma";
     return (
         <header className="header">
+            <img id="robot" src="src/assests/robot.png" alt="" />
             <h1 id="title">AI Image Generator</h1>
             <button id="github" onClick={() => window.open(githubUrl)}>
                 <FaGithub id="git-icon" />

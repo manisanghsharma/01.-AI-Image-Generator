@@ -11,8 +11,14 @@ const Footer = () => {
               }
           >
               Buy Me a Coffee!
-          {/* {width < 610 ? <FaGithub style={{ fontSize: "15px" }} /> : null}   */}
           </p>
+          {width < 610 ? (
+              <FaGithub
+                  role="button"
+                  onClick={() => window.open("https://www.github.com/manisanghsharma")}
+                  id="footer-git"
+              />
+          ) : null}
       </footer>
   );
 }

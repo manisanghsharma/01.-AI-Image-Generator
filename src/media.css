@@ -3,11 +3,21 @@
     display: none;
   }
 
+  #robot{
+    display: none;
+  }
+
   .img-container{
     scale: 0.8;
     top: 40%;
     left: 40%;
   }
+}
+
+@media only screen and (max-width: 530px){
+    #footer-git{
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (max-width: 470px) { 
@@ -31,6 +41,10 @@
     top: 95px;
     left: 195px;
   }
+
+  #footer-git{
+        margin-left: 20px;
+    }
 }
 
 @media only screen and (max-width: 440px){
