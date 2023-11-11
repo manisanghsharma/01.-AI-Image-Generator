@@ -1,163 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
-.dark-theme{
-  --primary-color: #191919;
-  --secondary-color: #121212b0;
-  --font-color: rgb(225, 225, 225);
+.dark-theme {
+    --primary-color: #191919;
+    --secondary-color: #121212b0;
+    --font-color: rgb(225, 225, 225);
 }
 
-.light-theme{
+/* .light-theme{
   --primary-color: rgb(179, 245, 240);
   --secondary-color: rgb(120, 226, 224);
   --font-color: 191919;
+} */
+
+body {
+    background-color: var(--primary-color);
 }
 
-body{
-background-color: var(--primary-color);
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    height: 95vh;
 }
 
-
-.container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 40px;
-  align-items: center;
-  height: 95vh;
+h1 {
+    color: var(--font-color);
+    font-size: 40px;
+    position: absolute;
 }
 
-h1{
-  color: var(--font-color);
-  font-size: 40px;
-  position: absolute;
+.inputBox {
+    scale: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px;
+}
+.inputBox input {
+    width: 200px;
+    height: 40px;
+    padding: 15px;
 }
 
-
-.inputBox{
-  scale: 1.4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 80px;
-}
-.inputBox input{
-  width: 200px;
-  height: 40px;
-  padding: 15px;
+.inputBox button {
+    height: 30px;
+    cursor: pointer;
 }
 
-.inputBox button{
-  height: 30px;
-  cursor: pointer;
+ul {
+    list-style-type: none;
+    line-height: 0;
+    place-content: center;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: relative;
+    bottom: 10px;
 }
 
-ul{
-  list-style-type: none;
-  line-height: 0;
-  place-content: center;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  position: relative;
-  bottom: 10px;
+ul li img {
+    border-radius: 10px;
+    width: 200px;
+    cursor: pointer;
 }
 
-ul li img{
-  border-radius: 10px;
-  width: 200px;
-  cursor: pointer;
+#searchBox {
+    outline: 0;
+    border-radius: 10px;
+    border: 0;
+}
+#searchBtn {
+    background-color: crimson;
+    color: var(--font-color);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    padding: 0 10px;
+    height: 40px;
+    font-size: 13px;
 }
 
-#searchBox{
-  outline: 0;
-  border-radius: 10px;
-  border: 0;
-}
-#searchBtn{
-  background-color: crimson;
-  color: var(--font-color);
-  border: 0;
-  outline: 0;
-  border-radius: 10px;
-  padding: 0 10px;
-  height: 40px;
-  font-size: 13px;
+#searchBtn:hover {
+    background-color: crimson;
 }
 
-#searchBtn:hover{
-  background-color: crimson;
+#loading {
+    font-size: 25px;
+    color: var(--font-color);
 }
 
-#loading{
-  font-size: 25px;
-  color: var(--font-color);
+.footer {
+    text-align: center;
+    color: var(--font-color);
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.footer{
-  text-align: center;
-  color: var(--font-color);
-  position: relative;
-  top: 10px;
-  cursor: pointer;
-  transition: all 0.2s;
+.footer:hover {
+    color: #fedd03;
+    transition: all 0.2s;
 }
 
-.footer:hover{
-  color: #FEDD03;
-  transition: all 0.2s;
+.header {
+    padding: 0 30px;
+    width: 100%;
+    height: 80px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header{
-  padding: 0 30px;
-  width: 100%;
-  height: 80px;
-  background-color: var(--secondary-color);
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#github {
+    height: 60%;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 7px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: var(--font-color);
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    position: absolute;
+    right: 15px;
 }
 
-#github{
-  height: 60%;
-  padding: 0 20px;
-  outline: 0;
-  border: 0;
-  border-radius: 7px;
-  background-color: #000000;
-  border: 1px solid #000000;
-  color: var(--font-color);
-  cursor: pointer;
-  font-size: 17px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 11px;
-  position: absolute;
-  right: 15px;
+#github:hover {
+    background-color: rgba(8, 7, 7, 0.822);
+    border: 1px solid white;
 }
 
-#github:hover{
-  background-color: rgba(8, 7, 7, 0.822);
-  border: 1px solid white;
+#theme {
+    width: 35px;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
 }
 
-#theme{
-  width: 35px;
-  cursor: pointer;
-  position: absolute;
-  left: 15px;
+#git-icon {
+    font-size: 25px;
 }
 
-#git-icon{
-  font-size: 25px;
+.img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.img-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container svg {
+    font-size: 20px;
+}
+
+#next,
+#back {
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+}
+
+#next {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+
+#back {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+#slider-img {
+    width: 550px;
+    border-radius: 5px;
+}
+
+#cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+
+}
+
+#download{
+    padding: 10px 20px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: crimson;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    transition: all 0.2s;
+    left: 190px;
+    bottom: -72px;
+  }
+
+#download:hover{
+    background-color: rgb(185, 0, 37);
+    transition: all 0.2s;
 }
