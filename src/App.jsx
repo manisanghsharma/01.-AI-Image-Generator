@@ -52,9 +52,8 @@ function App() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization:
-                        "Bearer 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",
-                        "User-Agent": "Chrome",
+                    Authorization: import.meta.env.VITE_SECRET_KEY,
+                    "User-Agent": "Chrome",
                 },
                 body: JSON.stringify({
                     prompt: `${search}`,
