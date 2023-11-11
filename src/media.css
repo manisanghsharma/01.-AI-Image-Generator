@@ -21,7 +21,7 @@
 
   .img-container{
     scale: 0.65;
-    top: 28%;
+    top: 35%;
     left: 28%;
   }
 
@@ -31,4 +31,12 @@
     top: 95px;
     left: 195px;
   }
+}
+
+@media only screen and (max-width: 440px){
+    .img-container{
+        left: 26.4%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+    }
 }
