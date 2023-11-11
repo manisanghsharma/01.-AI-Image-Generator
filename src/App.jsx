@@ -9,7 +9,8 @@ function App() {
   const [theme, setTheme] = useState('dark');
   const [listItems, setListItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const apiUrl = "https://api.openai.com/v1/images/generations";
+  // const apiUrl = "https://api.openai.com/v1/images/generations";
+  const apiUrl = "https://api.pepper-ai.space/text2img";
 
 
   const handleSearch = async() => {
@@ -21,21 +22,21 @@ function App() {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            Authorization:
-                "Bearer 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",
-                "User-Agent": "Chrome",
+            Authorization: "1234"
+                // "Bearer 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",
+                // "User-Agent": "Chrome",
         },
         body:JSON.stringify({
            prompt: `${search}`,
-           n:4,
-           size: "512x512"
+          //  n:4,
+          //  size: "512x512"
         }),
       });
       let data = await response.json();
-      let data_array = data.data;
-      console.log(data_array);
-      setListItems(data_array);
-      setImgurl(data_array[0].url);
+      // let data_array = data.data;
+      console.log(data);
+      // setListItems(data_array);
+      // setImgurl(data_array[0].url);
     }
 
     finally{
