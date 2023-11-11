@@ -2,15 +2,15 @@ import { FaAngleRight, FaAngleLeft, FaTimes } from "react-icons/fa";
 import JsFileDownloader from 'js-file-downloader';
 const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, listItems, current }) => {
     
-    const handleDownload = () => {
+    const handleDownload = async () => {
         new JsFileDownloader({
-            url: sliderImg,
-            headers: [
-                {
-                    name: "Authorization",
-                    value: "Bearer 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",
-                },
-            ],
+            url: sliderImg
+            // headers: [
+            //     {
+            //         name: "Authorization",
+            //         value: "Bearer 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",
+            //     },
+            // ],
         });
     }
 
@@ -31,7 +31,7 @@ const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, li
             </button>
             {/* <FaDownload id="download" /> */}
             {/* <a href={sliderImg} download="File" target="_blank" rel="noreferrer"> */}
-                <button onClick={() => handleDownload()} id="download">Download Image</button>
+                <button onClick={() => handleDownload} id="download">Download Image</button>
             {/* </a> */}
         </div>
     );
