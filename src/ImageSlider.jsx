@@ -1,17 +1,30 @@
 import { FaAngleRight, FaAngleLeft, FaTimes } from "react-icons/fa";
-import {saveAs} from 'file-saver';
-const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, listItems, current }) => {
-    
-    const handleDownload = async(url) => {
-        saveAs(url, `${prompt}-${current+1}`);
-    }
+import { saveAs } from "file-saver";
+const ImageSlider = ({
+    display,
+    setDisplay,
+    sliderImg,
+    handleBack,
+    handleNext,
+    current,
+    setContainerDisplay,
+    setConvis,
+    search
+}) => {
+    const handleDownload = (url) => {
+        saveAs(url, `${search}-${current + 1}`);
+    };
     return (
         <div className="img-container" style={{ display: display }}>
             <FaTimes
                 id="cross"
                 style={{ cursor: "pointer" }}
                 role="button"
-                onClick={() => setDisplay("none")}
+                onClick={() => {
+                    setDisplay("none");
+                    setContainerDisplay("block");
+                    setConvis("visible");
+                }}
             />
             <button id="back" onClick={() => handleBack()}>
                 <FaAngleLeft />
@@ -21,13 +34,9 @@ const ImageSlider = ({display, setDisplay, sliderImg, handleBack, handleNext, li
                 <FaAngleRight />
             </button>
 
-            <button
-                onClick={() => handleDownload(sliderImg)}
-                id="download"
-            >
+            <button onClick={() => handleDownload(sliderImg)} id="download">
                 Download Image
             </button>
-
         </div>
     );
 };

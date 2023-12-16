@@ -8,7 +8,9 @@ const Input = ({search, setSearch, handleSearch}) => {
               placeholder="Write prompt here..."
               id="searchBox"
           />
-          <button id="searchBtn" onClick={() => handleSearch()} type="submit">
+          <button id="searchBtn" onClick={() =>{
+            setTimeout(handleSearch, 2000)
+          }} type="submit">
               Generate
           </button>
       </form>
